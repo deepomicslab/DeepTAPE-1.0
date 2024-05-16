@@ -1,7 +1,7 @@
 
 # DeepTAPE-1.0 Package Documentation
 
-The DeepTAPE package provides a deep learning model capable of reference diagnostics for Systemic Lupus Erythematosus (SLE) and other autoimmune diseases.
+The Deep Learning-based TCR$\beta$-utilized Autoimmune Disease Prediction Engine (DeepTAPE) package provides a deep learning model capable of reference diagnostics for Systemic Lupus Erythematosus (SLE) and other autoimmune diseases.
 
 ## Requirements
 
