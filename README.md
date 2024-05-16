@@ -16,9 +16,14 @@ To diagnose SLE, you can use the function `result_df = predict_sle_by_DeepTAPE_A
 
 - `file_path`: The folder containing the samples to be predicted, for example, 'Data/'. Please format the files in the folder as follows:
 
+  <img width="258" alt="image" src="https://github.com/SHENTongfei/DeepTAPE-1.0/assets/116341224/db032603-734b-4ba2-8cdf-1d54fac3b34b">
+
+
 - `model_dir`: The location of the trained DeepTAPE model `.h5` file, for example, 'Trained_DeepTAPE/'.
 
 - `result_df`: The output is a DataFrame, which is saved and appears as follows:
+
+<img width="255" alt="image" src="https://github.com/SHENTongfei/DeepTAPE-1.0/assets/116341224/25988201-0a0b-40ce-aa18-d27196256da3">
 
 ### Diagnosing Other Autoimmune Diseases
 
@@ -38,9 +43,18 @@ If you wish to train a model based solely on amino acid sequences, you can use t
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences). For example, 'Train&Test_Data\\Data_for_train\\Sample_A.csv'. Please format the file as follows:
 
+  <img width="222" alt="image" src="https://github.com/SHENTongfei/DeepTAPE-1.0/assets/116341224/af51e51f-8d81-448c-b30f-b0f6b780705a">
+
+
 - `x_test`: The file name for testing, for example, 'Train&Test_Data\\X_test.csv', which appears as follows:
 
+  <img width="109" alt="image" src="https://github.com/SHENTongfei/DeepTAPE-1.0/assets/116341224/2182782a-195b-4b88-ad26-507fa21f1130">
+
+
 - `y_test`: The file path for the labels in the test dataset (such as positive or negative samples). For example, 'Train&Test_Data\\X_test.csv', which appears as follows:
+
+  <img width="109" alt="image" src="https://github.com/SHENTongfei/DeepTAPE-1.0/assets/116341224/4721ae96-16e4-4051-8250-639ec961a20a">
+
 
 - `neg_file`: The file path for negative samples, used to separate negative samples during prediction. For example, 'Train&Test_Data\\neg_Data'.
 
@@ -68,6 +82,9 @@ To train a model based on V-gene and amino acid sequence feature combinations, u
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences and corresponding V-genes). For example, 'Train&Test_Data\\Data_for_train\\Sample_A_V.csv'. Please format the file as follows:
 
+  <img width="109" alt="image" src="https://github.com/SHENTongfei/DeepTAPE-1.0/assets/116341224/fc067f24-5c1a-4664-9ed9-fcfae5c34d4c">
+
+
 - `x_test`, `y_test`, `neg_file`, `pos_file`, `model`, `model_file`: The meanings are the same as above, with `model` example changed to `cnn_lstm_res_gene`.
 
 The output results are:
@@ -87,6 +104,9 @@ The output results are:
 To train a model based on V-gene family and amino acid sequence feature combinations, use the function `accuracy, precision, recall, F1_score, roc_auc, pre, DF_N, DF_P, Y_test, EDP, EDN = train_and_use_with_gene_family(data, x_test, y_test, neg_file, pos_file, model, model_file)`, where the input hyperparameters include:
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences and corresponding V-gene families). For example, 'Train&Test_Data\\Data_for_train\\Sample_A_VF.csv'. Please format the file as follows:
+
+  <img width="279" alt="image" src="https://github.com/SHENTongfei/DeepTAPE-1.0/assets/116341224/f54a2797-c45b-4a6f-90ad-34969e9d8ebd">
+
 
 The output results are:
 
