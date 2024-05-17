@@ -38,7 +38,7 @@ from train_and_use import *
 # # --------------------------------------------------------------------------------------------
 
 # # If you have curated training data with AA and V_gene that you haven't used to train a model yet, use the following functions.
-# result = train_and_use_with_gene('Train_and_Test_Data/Data_for_train/Sample_A_V.csv',
+# results = train_and_use_with_gene('Train_and_Test_Data/Data_for_train/Sample_A_V.csv',
 #                                 'Train_and_Test_Data/X_test.csv',
 #                                 'Train_and_Test_Data/Y_test.csv',
 #                                 'Train_and_Test_Data/neg_Data/',
@@ -47,7 +47,7 @@ from train_and_use import *
 #                                 'Trained_DeepTAPE/DeepTAPE_A_V_new.h5')
 
 # # If you have curated training data with AA and V_gene_family that you haven't used to train a model yet, use the following functions.
-# result = train_and_use_with_gene_family('Train_and_Test_Data/Data_for_train/Sample_A_VF.csv',
+# results = train_and_use_with_gene_family('Train_and_Test_Data/Data_for_train/Sample_A_VF.csv',
 #                                         'Train_and_Test_Data/X_test.csv',
 #                                         'Train_and_Test_Data/Y_test.csv',
 #                                         'Train_and_Test_Data/neg_Data/',
@@ -56,7 +56,7 @@ from train_and_use import *
 #                                         'Trained_DeepTAPE/DeepTAPE_A_VF_new.h5')
 
 
- # result = train_and_use('Train_and_Test_Data/Data_for_train/Sample_A.csv',
+ # results = train_and_use('Train_and_Test_Data/Data_for_train/Sample_A.csv',
  #                        'Train_and_Test_Data/X_test.csv',
  #                        'Train_and_Test_Data/Y_test.csv',
  #                        'Train_and_Test_Data/neg_Data/',
