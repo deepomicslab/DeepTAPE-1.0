@@ -15,7 +15,7 @@ from encoding import *
 def pred_by_DeepTAPE_A_VF_indepence(upper_file, file_name, model, AA_column, gene_column, num_freq):
     # Initialize empty lists to store the results
     score = []
-    socres_of_seq = pd.DataFrame()
+    score_of_seq = pd.DataFrame()
     PRE = []
     AA = []
     VF = []
@@ -77,7 +77,7 @@ def pred_by_DeepTAPE_A_VF_indepence(upper_file, file_name, model, AA_column, gen
         seq = ptc['CDR3AA']
         pre = pd.DataFrame(predictions)
         SOS = pd.concat([seq, pre], axis=1)
-        socres_of_seq = pd.concat([socres_of_seq, SOS])
+        score_of_seq = pd.concat([score_of_seq, SOS])
         
         # Append the predictions, amino acid sequences, and gene families to the respective lists
         predict = predictions.reshape(-1)
@@ -95,7 +95,7 @@ def pred_by_DeepTAPE_A_VF_indepence(upper_file, file_name, model, AA_column, gen
     # Create a DataFrame with the final results
     df = {'AA': AA, 'VGeneFam': VF, 'predictions': PRE}
     DF = pd.DataFrame(df)
-    return score, socres_of_seq, DF
+    return score, score_of_seq, DF
 
 #--------------------------------------------------------------------------------------------
 def pred_by_DeepTAPE_A_V_indepence(upper_file, file_name, model, AA_column, gene_column, num_freq):
@@ -104,7 +104,7 @@ def pred_by_DeepTAPE_A_V_indepence(upper_file, file_name, model, AA_column, gene
     # Create a dictionary to map gene family names to indices
     A = {'TRBV12-1': 21, 'TRBV24-2': 22, 'TRBV6-8': 23, 'TRBV29-1': 24, 'TRBV1': 25, 'TRBV14': 26, 'TRBV6-1': 27, 'TRBV4-1': 28, 'TRBV7-8': 29, 'TRBV6-3': 30, 'TRBV27': 31, 'TRBV19': 32, 'TRBV12-4': 33, 'TRBV23-2': 34, 'TRBV7-3': 35, 'TRBV5-4': 36, 'TRBV11-3': 37, 'TRBV4-3': 38, 'TRBV5-7': 39, 'TRBV6-5': 40, 'TRBV25-1': 41, 'TRBV10-3': 42, 'TRBV6-6': 43, 'TRBV16': 44, 'TRBV5-6': 45, 'TRBV6-4': 46, 'TRBV12-3': 47, 'TRBV10-2': 48, 'TRBV13': 49, 'TRBV3-1': 50, 'TRBV15': 51, 'TRBV7-4': 52, 'TRBV21-1': 53, 'TRBV7-7': 54, 'TRBV5-5': 55, 'TRBV6-7': 56, 'TRBV7-6': 57, 'TRBV11-1': 58, 'TRBV9': 59}
     
-    socres_of_seq = pd.DataFrame()
+    score_of_seq = pd.DataFrame()
     PRE = []
     AA = []
     VF = []
@@ -165,7 +165,7 @@ def pred_by_DeepTAPE_A_V_indepence(upper_file, file_name, model, AA_column, gene
         seq = ptc['CDR3AA']
         pre = pd.DataFrame(predictions)
         SOS = pd.concat([seq, pre], axis=1)
-        socres_of_seq = pd.concat([socres_of_seq, SOS])
+        score_of_seq = pd.concat([score_of_seq, SOS])
         
         # Append the predictions, amino acid sequences, and gene families to the respective lists
         predict = predictions.reshape(-1)
@@ -183,13 +183,13 @@ def pred_by_DeepTAPE_A_V_indepence(upper_file, file_name, model, AA_column, gene
     # Create a final DataFrame with the results
     df = {'AA': AA, 'VGene': VF, 'predictions': PRE}
     DF = pd.DataFrame(df)
-    return score, socres_of_seq, DF
+    return score, score_of_seq, DF
 
 
 #--------------------------------------------------------------------------------------------
 def pred_by_DeepTAPE_A_indepence(upper_file, file_name, model, col_name, col_name2, num_freq):
     score = []
-    socres_of_seq = pd.DataFrame()
+    score_of_seq = pd.DataFrame()
     
     # Iterate through the file names
     for name in file_name:
@@ -232,9 +232,9 @@ def pred_by_DeepTAPE_A_indepence(upper_file, file_name, model, col_name, col_nam
         seq = ptc['CDR3AA']
         pre = pd.DataFrame(predictions)
         SOS = pd.concat([seq, pre], axis=1)
-        socres_of_seq = pd.concat([socres_of_seq, SOS])
+        score_of_seq = pd.concat([score_of_seq, SOS])
     
-    return score, socres_of_seq
+    return score, score_of_seq
 
 
 import numpy as np
@@ -311,7 +311,7 @@ def pred(upper_file, file_name, model, num_freq):
 def pred_with_gene(upper_file,file_name,model,AA_column,gene_column,num_freq, c): #有attention
 
     score=[]
-    socres_of_seq = pd.DataFrame()
+    score_of_seq = pd.DataFrame()
     PRE = []
     AA = []
     VF = []
@@ -365,7 +365,7 @@ def pred_with_gene(upper_file,file_name,model,AA_column,gene_column,num_freq, c)
         seq = ptc['CDR3AA']
         pre = pd.DataFrame(predictions)
         SOS = pd.concat([seq,pre],axis = 1)
-        socres_of_seq = pd.concat([socres_of_seq,SOS])
+        score_of_seq = pd.concat([score_of_seq,SOS])
         predict = predictions.reshape(-1)
         pred = predict.tolist()
         PRE = PRE + pred
@@ -384,7 +384,7 @@ def pred_with_gene(upper_file,file_name,model,AA_column,gene_column,num_freq, c)
         extreme_DF = DF.sort_values(by='predictions', ascending=False).iloc[:100]
     else:
         extreme_DF = DF.sort_values(by='predictions', ascending=False).tail(100)
-    return score, socres_of_seq ,DF, extreme_DF
+    return score, score_of_seq ,DF, extreme_DF
 
 
 
@@ -396,7 +396,7 @@ def pred_with_gene(upper_file,file_name,model,AA_column,gene_column,num_freq, c)
 
 def pred_with_gene_family(upper_file,file_name,model,AA_column,gene_column,num_freq, c): #有attention
     score=[]
-    socres_of_seq = pd.DataFrame()
+    score_of_seq = pd.DataFrame()
     PRE = []
     AA = []
     VF = []
@@ -439,7 +439,7 @@ def pred_with_gene_family(upper_file,file_name,model,AA_column,gene_column,num_f
         seq = ptc['CDR3AA']
         pre = pd.DataFrame(predictions)
         SOS = pd.concat([seq,pre],axis = 1)
-        socres_of_seq = pd.concat([socres_of_seq,SOS])
+        score_of_seq = pd.concat([score_of_seq,SOS])
         
         predict = predictions.reshape(-1)
         pred = predict.tolist()
@@ -458,7 +458,7 @@ def pred_with_gene_family(upper_file,file_name,model,AA_column,gene_column,num_f
         extreme_DF = DF.sort_values(by='predictions', ascending=False).iloc[:100]
     else:
         extreme_DF = DF.sort_values(by='predictions', ascending=False).tail(100)
-    return score, socres_of_seq ,DF,extreme_DF
+    return score, score_of_seq ,DF,extreme_DF
 
 
 #--------------------------------------------------------------------------------------------
@@ -466,7 +466,7 @@ def pred_with_gene_family(upper_file,file_name,model,AA_column,gene_column,num_f
 
 def pred_with_gene_family_indepence(upper_file,file_name,model,AA_column,gene_column,num_freq):
     score=[]
-    socres_of_seq = pd.DataFrame()
+    score_of_seq = pd.DataFrame()
     PRE = []
     AA = []
     VF = []
@@ -513,7 +513,7 @@ def pred_with_gene_family_indepence(upper_file,file_name,model,AA_column,gene_co
         seq = ptc['CDR3AA']
         pre = pd.DataFrame(predictions)
         SOS = pd.concat([seq,pre],axis = 1)
-        socres_of_seq = pd.concat([socres_of_seq,SOS])
+        score_of_seq = pd.concat([score_of_seq,SOS])
         
         predict = predictions.reshape(-1)
         pred = predict.tolist()
@@ -528,4 +528,4 @@ def pred_with_gene_family_indepence(upper_file,file_name,model,AA_column,gene_co
         VF = VF + v
     df = {'AA':AA,'VGeneFam':VF,'predictions':PRE}
     DF = pd.DataFrame(df)
-    return score, socres_of_seq, DF
+    return score, score_of_seq, DF

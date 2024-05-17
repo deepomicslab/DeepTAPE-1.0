@@ -38,31 +38,31 @@ from train_and_use import *
 # # --------------------------------------------------------------------------------------------
 
 # # If you have curated training data with AA and V_gene that you haven't used to train a model yet, use the following functions.
-# accuracy, precision, recall, F1_score, roc_auc , pre, DF_N, DF_P, Y_test, EDP, EDN = train_and_use_with_gene('Train_and_Test_Data/Data_for_train/Sample_A_V.csv',
-#                                                                                                                 'Train_and_Test_Data/X_test.csv',
-#                                                                                                                 'Train_and_Test_Data/Y_test.csv',
-#                                                                                                                 'Train_and_Test_Data/neg_Data/',
-#                                                                                                                 'Train_and_Test_Data/pos_Data/',
-#                                                                                                                 cnn_lstm_res_gene,
-#                                                                                                                 'Trained_DeepTAPE/DeepTAPE_A_V_new.h5')
+# result = train_and_use_with_gene('Train_and_Test_Data/Data_for_train/Sample_A_V.csv',
+#                                 'Train_and_Test_Data/X_test.csv',
+#                                 'Train_and_Test_Data/Y_test.csv',
+#                                 'Train_and_Test_Data/neg_Data/',
+#                                 'Train_and_Test_Data/pos_Data/',
+#                                 cnn_lstm_res_gene,
+#                                 'Trained_DeepTAPE/DeepTAPE_A_V_new.h5')
 
 # # If you have curated training data with AA and V_gene_family that you haven't used to train a model yet, use the following functions.
-# accuracy, precision, recall, F1_score, roc_auc , pre, DF_N, DF_P, Y_test, EDP, EDN = train_and_use_with_gene_family('Train_and_Test_Data/Data_for_train/Sample_A_VF.csv',
-#                                                                                                                 'Train_and_Test_Data/X_test.csv',
-#                                                                                                                 'Train_and_Test_Data/Y_test.csv',
-#                                                                                                                 'Train_and_Test_Data/neg_Data/',
-#                                                                                                                 'Train_and_Test_Data/pos_Data/',
-#                                                                                                                 cnn_lstm_res_gene,
-#                                                                                                                 'Trained_DeepTAPE/DeepTAPE_A_VF_new.h5')
+# result = train_and_use_with_gene_family('Train_and_Test_Data/Data_for_train/Sample_A_VF.csv',
+#                                         'Train_and_Test_Data/X_test.csv',
+#                                         'Train_and_Test_Data/Y_test.csv',
+#                                         'Train_and_Test_Data/neg_Data/',
+#                                         'Train_and_Test_Data/pos_Data/',
+#                                         cnn_lstm_res_gene,
+#                                         'Trained_DeepTAPE/DeepTAPE_A_VF_new.h5')
 
 
-# accuracy, precision, recall, F1_score, roc_auc ,pre, Y_test, SOS_C ,SOS_S = train_and_use('Train_and_Test_Data/Data_for_train/Sample_A.csv',
-#                                                                                         'Train_and_Test_Data/X_test.csv',
-#                                                                                         'Train_and_Test_Data/Y_test.csv',
-#                                                                                         'Train_and_Test_Data/neg_Data/',
-#                                                                                         'Train_and_Test_Data/pos_Data/',
-#                                                                                           cnn_lstm_res,
-#                                                                                           'Trained_DeepTAPE/DeepTAPE_A_new.h5')
+ # result = train_and_use('Train_and_Test_Data/Data_for_train/Sample_A.csv',
+ #                        'Train_and_Test_Data/X_test.csv',
+ #                        'Train_and_Test_Data/Y_test.csv',
+ #                        'Train_and_Test_Data/neg_Data/',
+ #                        'Train_and_Test_Data/pos_Data/',
+ #                          cnn_lstm_res,
+ #                          'Trained_DeepTAPE/DeepTAPE_A_new.h5')
 
 
 

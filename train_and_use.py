@@ -55,7 +55,20 @@ def train_and_use(data,x_test,y_test,neg_file,pos_file,model_type,model_file):
     Y_test = np.concatenate([neg_y,pos_y])
     # Compute the evaluation metrics
     accuracy, precision, recall, F1_score, roc_auc = evaluation_metric(pre, Y_test, 2,0)
-    return accuracy, precision, recall, F1_score, roc_auc ,pre, Y_test, SOS_C ,SOS_S
+    
+    metrics = {
+    'accuracy': accuracy,
+    'precision': precision,
+    'recall': recall,
+    'F1_score': F1_score,
+    'roc_auc': roc_auc,
+    'pre': pre,
+    'Y_test': Y_test,
+    'SOS_C': SOS_C,
+    'SOS_S': SOS_S
+    }
+    
+    return metrics
 
 #--------------------------------------------------------------------------------------------
 
@@ -100,8 +113,22 @@ def train_and_use_with_gene(data,x_test,y_test,neg_file,pos_file,model,model_fil
     Y_test = np.concatenate([neg_y,pos_y])
     # Compute the evaluation metrics
     accuracy, precision, recall, F1_score, roc_auc = evaluation_metric(pre, Y_test, 2,0)
-    return accuracy, precision, recall, F1_score, roc_auc , pre, DF_N, DF_P, Y_test, EDP, EDN
+    
+    metrics = {
+    'accuracy': accuracy,
+    'precision': precision,
+    'recall': recall,
+    'F1_score': F1_score,
+    'roc_auc': roc_auc,
+    'pre': pre,
+    'DF_N': DF_N,
+    'DF_P': DF_P,
+    'Y_test': Y_test,
+    'EDP': EDP,
+    'EDN': EDN
+    }
 
+    return metrics
 
 #--------------------------------------------------------------------------------------------
 
@@ -147,7 +174,22 @@ def train_and_use_with_gene_family(data,x_test,y_test,neg_file,pos_file,model,mo
     Y_test = np.concatenate([neg_y,pos_y])
     # Compute the evaluation metrics
     accuracy, precision, recall, F1_score, roc_auc = evaluation_metric(pre, Y_test, 2,0)
-    return accuracy, precision, recall, F1_score, roc_auc ,pre, DF_N, DF_P, Y_test, EDP, EDN
+    
+    metrics = {
+    'accuracy': accuracy,
+    'precision': precision,
+    'recall': recall,
+    'F1_score': F1_score,
+    'roc_auc': roc_auc,
+    'pre': pre,
+    'DF_N': DF_N,
+    'DF_P': DF_P,
+    'Y_test': Y_test,
+    'EDP': EDP,
+    'EDN': EDN
+    }
+
+    return metrics
 
 #--------------------------------------------------------------------------------------------
 
