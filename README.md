@@ -71,15 +71,24 @@ If you wish to train a model based solely on amino acid sequences, you can use t
 
 The output results are:
 
-- `accuracy`: The accuracy of the prediction.
-- `precision`: The precision of the prediction.
-- `recall`: The recall rate of the prediction.
-- `F1_score`: The F1 score of the prediction.
-- `roc_auc`: The ROC-AUC value of the prediction.
-- `pre`: The predicted values, i.e., the Autoimmune Risk Score.
-- `Y_test`: The array of true labels for the test data.
-- `SOS_C`: The predicted values for each sequence of negative samples.
-- `SOS_S`: The predicted values for each sequence of positive samples.
+- `results['accuracy']`: Represents the overall correctness of the model's predictions.
+  
+- `results['precision']`: Measures the proportion of true positive predictions in the positive class.
+
+- `results['recall']`: Indicates the model's ability to find all the relevant cases within a dataset.
+  
+- `results['F1_score']`: The harmonic mean of precision and recall, providing a balance between the two.
+  
+- `results['roc_auc']`: Reflects the likelihood that the model ranks a random positive example more highly than a random negative example.
+  
+- `results['pre']`: The predicted values, i.e., the Autoimmune Risk Score.
+  
+- `results['Y_test']`: The array of true labels for the test data.
+  
+- `results['SOS_C']`: The predicted scores for each sequence of negative samples.
+  
+- `results['SOS_S']`: The predicted scores for each sequence of positive samples.
+
 
 ### Training a Model Based on V-Gene and Amino Acid Sequence Features
 
@@ -94,15 +103,12 @@ To train a model based on V-gene and amino acid sequence feature combinations, u
 
 The output results are:
 
-- `accuracy`, `precision`, `recall`, `F1_score`, `roc_auc`, `pre`, `Y_test`: The meanings are the same as above.
+- `results[accuracy]`, `results[precision]`, `results[recall]`, `results[F1_score]`, `results[roc_auc]`, `results[pre]`, `results[Y_test]`: The meanings are the same as above.
 
-- `DF_N`: A DataFrame for negative samples with columns {'AA': AA, 'VGene': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene, and the prediction results.
-
-- `DF_P`: A DataFrame for positive samples with columns {'AA': AA, 'VGene': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene, and the prediction results.
-
-- `EDP`: A DataFrame of the top 100 peptide segments with the highest prediction scores among positive samples, for further research.
-
-- `EDN`: A DataFrame of the bottom 100 peptide segments with the lowest prediction scores among negative samples, for further research.
+- `results['DF_N']`: A DataFrame for negative samples with columns {'AA': AA, 'VGene': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene, and the prediction results.
+- `results['DF_P']`: A DataFrame for positive samples with columns {'AA': AA, 'VGene': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene, and the prediction results.
+- `results['EDP']`: A DataFrame of the top 100 peptide segments with the highest prediction scores among positive samples, for further research.
+- `results['EDN']`: A DataFrame of the bottom 100 peptide segments with the lowest prediction scores among negative samples, for further research.
 
 ### Training a Model Based on V-Gene Family and Amino Acid Sequence Features
 
@@ -115,11 +121,11 @@ To train a model based on V-gene family and amino acid sequence feature combinat
 
 The output results are:
 
-- `accuracy`, `precision`, `recall`, `F1_score`, `roc_auc`, `pre`, `Y_test`, `EDP`, `EDN`: The meanings are the same as above.
+- `results[accuracy]`, `results[precision]`, `results[recall]`, `results[F1_score]`, `results[roc_auc]`, `results[pre]`, `results[Y_test]`, `results[EDP]`, `results[EDN]`: The meanings are the same as above.
 
-- `DF_N`: A DataFrame for negative samples with columns {'AA': AA, 'VGeneFam': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene family, and the prediction results.
+- `results[DF_N]`: A DataFrame for negative samples with columns {'AA': AA, 'VGeneFam': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene family, and the prediction results.
 
-- `DF_P`: A DataFrame for positive samples with columns {'AA': AA, 'VGeneFam': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene family, and the prediction results.
+- `results[DF_P]`: A DataFrame for positive samples with columns {'AA': AA, 'VGeneFam': VF, 'predictions': PRE}, representing the amino acid sequence, its corresponding V-gene family, and the prediction results.
 
 ## Generating Training Set Merge Data Tool
 
