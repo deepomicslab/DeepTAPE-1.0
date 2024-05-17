@@ -44,7 +44,7 @@ For diagnosing other autoimmune diseases, you can use the function `result_df = 
 
 ### Training a Model Based on Amino Acid Sequence Features
 
-If you wish to train a model based solely on amino acid sequences, you can use the function `accuracy, precision, recall, F1_score, roc_auc, pre, Y_test, SOS_C, SOS_S = train_and_use(data, x_test, y_test, neg_file, pos_file, model_type, model_file)`, where the input hyperparameters are:
+If you wish to train a model based solely on amino acid sequences, you can use the function `results = train_and_use(data, x_test, y_test, neg_file, pos_file, model_type, model_file)`, where the input hyperparameters are:
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences). For example, 'Train&Test_Data\\Data_for_train\\Sample_A.csv'. Please format the file as follows:
 
@@ -92,7 +92,7 @@ The output results are:
 
 ### Training a Model Based on V-Gene and Amino Acid Sequence Features
 
-To train a model based on V-gene and amino acid sequence feature combinations, use the function `accuracy, precision, recall, F1_score, roc_auc, pre, DF_N, DF_P, Y_test, EDP, EDN = train_and_use_with_gene(data, x_test, y_test, neg_file, pos_file, model, model_file)`, where the input hyperparameters include:
+To train a model based on V-gene and amino acid sequence feature combinations, use the function `results = train_and_use_with_gene(data, x_test, y_test, neg_file, pos_file, model, model_file)`, where the input hyperparameters include:
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences and corresponding V-genes). For example, 'Train&Test_Data\\Data_for_train\\Sample_A_V.csv'. Please format the file as follows:
 
@@ -112,7 +112,7 @@ The output results are:
 
 ### Training a Model Based on V-Gene Family and Amino Acid Sequence Features
 
-To train a model based on V-gene family and amino acid sequence feature combinations, use the function `accuracy, precision, recall, F1_score, roc_auc, pre, DF_N, DF_P, Y_test, EDP, EDN = train_and_use_with_gene_family(data, x_test, y_test, neg_file, pos_file, model, model_file)`, where the input hyperparameters include:
+To train a model based on V-gene family and amino acid sequence feature combinations, use the function `results = train_and_use_with_gene_family(data, x_test, y_test, neg_file, pos_file, model, model_file)`, where the input hyperparameters include:
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences and corresponding V-gene families). For example, 'Train&Test_Data\\Data_for_train\\Sample_A_VF.csv'. Please format the file as follows:
 
