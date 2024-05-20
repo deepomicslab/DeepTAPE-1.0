@@ -220,8 +220,7 @@ def pred_by_DeepTAPE_A_indepence(upper_file, file_name, model, col_name, col_nam
         # Encode the data for the model
         X = ptc['CDR3AA'].to_list()
         x = encoding(len(X), 24, X)
-        print(x)
-        print(type(x)) 
+
         # Make predictions with the model
         predictions = model.predict(x)
         E = float(predictions.mean())
