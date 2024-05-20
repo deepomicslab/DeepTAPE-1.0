@@ -13,7 +13,7 @@ It is recommended to run this package within a conda environment, and Anaconda P
 git clone https://github.com/SHENTongfei/DeepTAPE-1.0.git
 cd DeepTAPE-1.0
 conda create --name DeepTAPE python=3.9
-activate DeepTAPE
+conda activate DeepTAPE
 pip install -r requirements.txt
 python main.py
 ```
