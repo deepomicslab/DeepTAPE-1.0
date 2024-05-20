@@ -22,7 +22,7 @@ After these steps, you will be able to run subsequent functions as required by t
 
 
 
-This package includes pre-trained models that can be used directly for diagnostics. It also supports training new models within the existing framework and validating them afterward. To use, please operate within the conda environment and execute `main.py`, which also provides usage examples and samples.
+This package includes pre-trained models that can be used directly for diagnostics. It also supports training new models within the existing framework and validating them afterward. To use, please operate within the conda environment and execute `main.py`, which also provides usage examples and samples. You can comment out the functions that are not needed in this usage.
 
 ## Using Pre-Trained Models
 
