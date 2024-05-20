@@ -50,7 +50,7 @@ def train_and_use(data,x_test,y_test,neg_file,pos_file,model_type,model_file):
     SPB, SOS_S = pred(pos_file,pos_test, model,2000)
     # Combine the predicted labels
     pre = np.concatenate([SNB,SPB])
-    print(pre)
+
     # Combine the true labels
     Y_test = np.concatenate([neg_y,pos_y])
     # Compute the evaluation metrics
@@ -108,7 +108,6 @@ def train_and_use_with_gene(data,x_test,y_test,neg_file,pos_file,model,model_fil
     SPB, SOS_S ,DF_P,EDP = pred_with_gene(pos_file,pos_test, model, 0, 1, 2000, 1)
     # Combine the predicted labels
     pre = np.concatenate([SNB,SPB])
-    print(pre)
     # Combine the true labels
     Y_test = np.concatenate([neg_y,pos_y])
     # Compute the evaluation metrics
@@ -169,7 +168,6 @@ def train_and_use_with_gene_family(data,x_test,y_test,neg_file,pos_file,model,mo
     SPB, SOS_S ,DF_P, EDP = pred_with_gene_family(pos_file,pos_test, model, 0, 1, 2000, 1)
     # Combine the predicted labels
     pre = np.concatenate([SNB,SPB])
-    print(pre)
     # Combine the true labels
     Y_test = np.concatenate([neg_y,pos_y])
     # Compute the evaluation metrics
