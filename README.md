@@ -3,16 +3,24 @@
 
 The Deep Learning-based TCRβ-utilized Autoimmune Disease Prediction Engine (DeepTAPE) package provides a deep learning model capable of reference diagnostics for Systemic Lupus Erythematosus (SLE) and other autoimmune diseases.
 
-Before running the program, please change the current directory to the DeepTAPE-1.0 folder.
+
 
 ## Requirements
 
-It is recommended to run this package within a conda environment. The preferred conda environment can be found in the `requirements.txt` file. Please ensure that the Python version of the environment is 3.9 or higher. To install packages using `pip` from a `requirements.txt` file, you can use the following command in your command prompt:
+It is recommended to run this package within a conda environment, and Anaconda Prompt is suggested for use. From downloading the package to satisfying the environment requirements, and then to running the script, the following Prompt commands should be executed in order:
 
-```
+```bash
+git clone https://github.com/SHENTongfei/DeepTAPE-1.0.git
+cd DeepTAPE-1.0
+conda create --name DeepTAPE python=3.9
+activate DeepTAPE
 pip install -r requirements.txt
+python main.py
 ```
-This command will install all the packages listed in the `requirements.txt` file along with the specified versions. Make sure that your environment is activated and that you are in the root directory of your environment when you execute this command.
+
+After these steps, you will be able to run subsequent functions as required by the tool.
+
+
 
 This package includes pre-trained models that can be used directly for diagnostics. It also supports training new models within the existing framework and validating them afterward. To use, please operate within the conda environment and execute `main.py`, which also provides usage examples and samples.
 
