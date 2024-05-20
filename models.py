@@ -66,8 +66,8 @@ outputs = Dense(1, activation='sigmoid')(flatten)
 # Create the model
 model_cnn = Model(inputs=inputs, outputs=outputs)
 
-# Print a summary of the model architecture
-model_cnn.summary()
+
+
 
 
 
@@ -118,7 +118,7 @@ merge = concatenate([cnn, lstm], axis=1)
 preds = Dense(1, activation='sigmoid')(merge)
 
 cnn_lstm_res = Model(input_layer, preds)
-cnn_lstm_res.summary()
+
 
 
 #--------------------------------------------------------------------------------------------
@@ -180,7 +180,7 @@ merge = concatenate([cnn, lstm, flatten], axis=1)
 preds = Dense(1, activation='sigmoid')(merge)
 
 cnn_lstm_res_gene = Model([input_layer_1, input_layer_2], preds)
-cnn_lstm_res_gene.summary()
+
 
 #--------------------------------------------------------------------------------------------
 
@@ -226,7 +226,7 @@ preds = Dense(1, activation='sigmoid')(merge)
 
 # Create the model
 cnn_lstm = Model(input_layer, preds)
-cnn_lstm.summary()
+
 
 #--------------------------------------------------------------------------------------------
 
@@ -282,7 +282,7 @@ merge = concatenate([cnn, lstm, flatten], axis=1)
 preds = Dense(1, activation='sigmoid')(merge)
 
 cnn_lstm_gene = Model([input_layer_1, input_layer_2], preds)
-cnn_lstm_gene.summary()
+
 
 #--------------------------------------------------------------------------------------------
 
@@ -328,8 +328,7 @@ preds = Dense(1,activation='sigmoid')(merge)
 # Define the model with two inputs and one output
 cnn_gene = Model([input_layer_1,input_layer_2],preds)
 
-# Print the model summary
-cnn_gene.summary()
+
 
 
 
@@ -349,8 +348,7 @@ model_logist.add(Flatten())
 # Add a dense layer with 1 neuron and relu activation function
 model_logist.add(Dense(1, activation='relu'))
 
-# Print a summary of the model's architecture
-model_logist.summary()
+
 
 #--------------------------------------------------------------------------------------------
 
@@ -384,8 +382,6 @@ output_layer = Dense(1, activation='relu')(merge)
 # Define the model with two inputs and one output
 logist_gene = Model(inputs=[input_layer_1,input_layer_2], outputs=output_layer)
 
-# Print the model summary
-logist_gene.summary()
 
 #--------------------------------------------------------------------------------------------
 
@@ -407,8 +403,7 @@ output_layer = Dense(1, activation='relu')(rnn)
 # Create the model with input and output layers
 model_SimpleRNN = Model(inputs=input_layer, outputs=output_layer)
 
-# Print the summary of the model
-model_SimpleRNN.summary()
+
 
 
 #--------------------------------------------------------------------------------------------
@@ -442,8 +437,7 @@ output_layer = Dense(1, activation='relu')(merge)
 # Create the model with two inputs and one output
 SimpleRNN_gene = Model(inputs=[input_layer_1,input_layer_2], outputs=output_layer)
 
-# Print the summary of the model
-SimpleRNN_gene.summary()
+
 
 
 
@@ -463,8 +457,7 @@ output_layer = Dense(1, activation='relu')(lstm)
 # Define the model
 model_lstm = Model(inputs=input_layer, outputs=output_layer)
 
-# Print model summary
-model_lstm.summary()
+
 
 
 
@@ -499,8 +492,6 @@ output_layer = Dense(1, activation='relu')(merge)
 # Define the model with two inputs and one output
 lstm_gene = Model(inputs=[input_layer_1, input_layer_2], outputs=output_layer)
 
-# Print the model summary
-lstm_gene.summary()
 
 
 
