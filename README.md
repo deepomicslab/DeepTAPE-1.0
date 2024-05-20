@@ -5,7 +5,7 @@ The Deep Learning-based TCRβ-utilized Autoimmune Disease Prediction Engine (Dee
 
 ## Requirements
 
-It is recommended to run this package within a conda environment. The preferred conda environment can be found in the `requirements.txt` file.To install packages using `pip` from a `requirements.txt` file, you can use the following command in your command prompt:
+It is recommended to run this package within a conda environment. The preferred conda environment can be found in the `requirements.txt` file. Please ensure that the Python version of the environment is 3.9 or higher. To install packages using `pip` from a `requirements.txt` file, you can use the following command in your command prompt:
 
 ```
 pip install -r requirements.txt
