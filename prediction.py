@@ -65,8 +65,7 @@ def pred_by_DeepTAPE_A_VF_indepence(upper_file, file_name, model, AA_column, gen
         X_2 = ptc['V_gene'].to_list()
         x_1 = encoding(len(X_1), 24, X_1)
         x_2 = encoding_gene_family(len(X_2), X_2)
-        print(x_2)
-        print(x_1)
+
         
         # Make predictions with the model
         predictions = model.predict([x_1, x_2])
