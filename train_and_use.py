@@ -270,7 +270,7 @@ def use_model_with_gene_family(model_file,x_test,y_test,neg_file,pos_file):
     return accuracy, precision, recall, F1_score, roc_auc ,pre, DF_N, DF_P, Y_test, EDP, EDN
 
 def train_and_use_model(data_type, data_for_train, x_test_path, y_test_path, neg_data_path, pos_data_path, model, model_path):
-    print('***************************Training model Strts.***************************')
+    print('***************************Training model Starts.***************************')
     if data_type == 'A_V':
         result = train_and_use_with_gene(data_for_train, x_test_path, y_test_path, neg_data_path, pos_data_path, model, model_path)
     elif data_type == 'A_VF':
