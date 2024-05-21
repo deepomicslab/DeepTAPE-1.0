@@ -14,7 +14,8 @@ git clone https://github.com/SHENTongfei/DeepTAPE-1.0.git
 cd DeepTAPE-1.0
 conda create --name DeepTAPE python=3.8
 conda activate DeepTAPE
-pip install -r requirements.txt
+conda install --file requirements_conda.txt
+pip install -r requirements_pip.txt
 python main.py
 ```
 
