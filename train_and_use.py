@@ -35,7 +35,7 @@ def train_and_use(data,x_test,y_test,neg_file,pos_file,model_type,model_file):
     history = model.fit(x, Y, epochs=epochs, batch_size=32)
     # Save the trained model
     model.save(model_file)
-    print('New model saved.')
+    print('***************************New model saved.***************************')
     # Load the saved model
     model = load_model(model_file)
     # Read the test data
@@ -93,7 +93,7 @@ def train_and_use_with_gene(data,x_test,y_test,neg_file,pos_file,model,model_fil
     history = model.fit([x_1,x_2], Y, epochs=epochs, batch_size=32)
     # Save the trained model
     model.save(model_file)
-    print('New model saved.')
+    print('***************************New model saved.***************************')
     # Load the saved model
     model = load_model(model_file)
     # Read the test data
@@ -153,7 +153,7 @@ def train_and_use_with_gene_family(data,x_test,y_test,neg_file,pos_file,model,mo
     history = model.fit([x_1,x_2], Y, epochs=epochs, batch_size=32)
     # Save the trained model
     model.save(model_file)
-    print('New model saved.')
+    print('***************************New model saved.***************************')
     # Load the saved model
     model = load_model(model_file)
     # Read the test data
@@ -246,6 +246,7 @@ def use_model_with_gene(model_file,x_test,y_test,neg_file,pos_file):
 
 
 def use_model_with_gene_family(model_file,x_test,y_test,neg_file,pos_file):
+
     # Load the saved model
     model = load_model(model_file)
     # Read the test data
@@ -269,6 +270,7 @@ def use_model_with_gene_family(model_file,x_test,y_test,neg_file,pos_file):
     return accuracy, precision, recall, F1_score, roc_auc ,pre, DF_N, DF_P, Y_test, EDP, EDN
 
 def train_and_use_model(data_type, data_for_train, x_test_path, y_test_path, neg_data_path, pos_data_path, model, model_path):
+    print('***************************Training model Strts.***************************')
     if data_type == 'A_V':
         result = train_and_use_with_gene(data_for_train, x_test_path, y_test_path, neg_data_path, pos_data_path, model, model_path)
     elif data_type == 'A_VF':
