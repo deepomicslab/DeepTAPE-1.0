@@ -15,6 +15,8 @@ Created on Tue May  2 20:03:53 2023
 import numpy as np
 import pandas as pd
 import os
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from encoding import *
 from prediction import *
 from SPCC import *
@@ -44,35 +46,14 @@ print('-------------------------------------------------------------------------
 
 # # --------------------------------------------------------------------------------------------
 
-# # If you have curated training data with AA and V_gene that you haven't used to train a model yet, use the following functions.
-result = train_and_use_with_gene('Train_and_Test_Data/Data_for_train/Sample_A_V.csv',
-                                 'Train_and_Test_Data/X_test.csv',
-                                 'Train_and_Test_Data/Y_test.csv',
-                                'Train_and_Test_Data/neg_Data/',
-                                 'Train_and_Test_Data/pos_Data/',
-                                 cnn_lstm_res_gene,
-                                 'Trained_DeepTAPE/DeepTAPE_A_V_new.h5')
-
-
-print('--------------------------------------------------------------------------------------------')
-# If you have curated training data with AA and V_gene_family that you haven't used to train a model yet, use the following functions.
-result = train_and_use_with_gene_family('Train_and_Test_Data/Data_for_train/Sample_A_VF.csv',
-                                        'Train_and_Test_Data/X_test.csv',
-                                        'Train_and_Test_Data/Y_test.csv',
-                                        'Train_and_Test_Data/neg_Data/',
-                                        'Train_and_Test_Data/pos_Data/',
-                                        cnn_lstm_res_gene,
-                                        'Trained_DeepTAPE/DeepTAPE_A_VF_new.h5')
-
-print('--------------------------------------------------------------------------------------------')
-
-result = train_and_use('Train_and_Test_Data/Data_for_train/Sample_A.csv',
-                    'Train_and_Test_Data/X_test.csv',
-                    'Train_and_Test_Data/Y_test.csv',
-                    'Train_and_Test_Data/neg_Data/',
-                    'Train_and_Test_Data/pos_Data/',
-                      cnn_lstm_res,
-                      'Trained_DeepTAPE/DeepTAPE_A_new.h5')
+result = train_and_use_model('A_V', 
+                             'Train_and_Test_Data/Data_for_train/Sample_A_V.csv'
+                             'Train_and_Test_Data/X_test.csv', 
+                             'Train_and_Test_Data/Y_test.csv', 
+                             'Train_and_Test_Data/neg_Data/', 
+                             'Train_and_Test_Data/pos_Data/', 
+                             cnn_lstm_res_gene, 
+                             'Trained_DeepTAPE/DeepTAPE_A_V_new.h5')
 
 
 
