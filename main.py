@@ -30,15 +30,15 @@ from train_and_use import *
 # # --------------------------------------------------------------------------------------------
 
 result_df = predict_sle_by_DeepTAPE_A_VF('Data/', 'Trained_DeepTAPE/')
-# # Output the result DataFrame
-print(result_df)
+
+
 
 print('--------------------------------------------------------------------------------------------')
 # # If the data you put in the folder is for diagnosing other autoimmune diseases, you need to use SPCC to select the best feature combination.
 # # --------------------------------------------------------------------------------------------
 
 result_df = predict_other_autoimmune_disease('Data/', 'Trained_DeepTAPE/')
-print(result_df)
+
 
 
 
@@ -47,7 +47,7 @@ print('-------------------------------------------------------------------------
 # # --------------------------------------------------------------------------------------------
 
 result = train_and_use_model('A_V', 
-                             'Train_and_Test_Data/Data_for_train/Sample_A_V.csv'
+                             'Train_and_Test_Data/Data_for_train/Sample_A_V.csv',
                              'Train_and_Test_Data/X_test.csv', 
                              'Train_and_Test_Data/Y_test.csv', 
                              'Train_and_Test_Data/neg_Data/', 
