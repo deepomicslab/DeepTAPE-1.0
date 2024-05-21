@@ -26,6 +26,8 @@ def predict_other_autoimmune_disease(file_path, model_dir):
     """
     name = os.listdir(file_path)
 
+    print('**************Diagnostic prediction starts.**************')
+
     # Threshold values obtained from cross-validation
     ThreShold_A_VF = [0.4861144423484802]
     ThreShold_A_V = [0.4925624430179596]
@@ -73,6 +75,10 @@ def predict_other_autoimmune_disease(file_path, model_dir):
             result_df = pd.concat([result_df, pd.DataFrame(new_row, index=[0])], ignore_index=True)
 
 
+    print('**************The diagnostic prediction results are as follows:**************')
+    print(result_df)
+
+
     return result_df
 
 def predict_sle_by_DeepTAPE_A_VF(file_path, model_dir):
@@ -85,7 +91,7 @@ def predict_sle_by_DeepTAPE_A_VF(file_path, model_dir):
     Returns:
         pd.DataFrame: A DataFrame containing the prediction results.
     """
-    
+    print('**************Diagnostic prediction starts.**************')
     # Threshold values obtained from cross-validation
     ThreShold_A_VF = [0.4861144423484802]
     ThreShold_A_V = [0.4925624430179596]
@@ -104,5 +110,8 @@ def predict_sle_by_DeepTAPE_A_VF(file_path, model_dir):
             result = "Negative"
         new_row = {'Filename': name[i], 'Score': s, 'Result': result}
         result_df = pd.concat([result_df, pd.DataFrame(new_row, index=[0])], ignore_index=True)
+        
+    print('**************The diagnostic prediction results are as follows:**************')
+    print(result_df)
     
     return result_df
