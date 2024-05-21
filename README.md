@@ -55,13 +55,13 @@ For diagnosing other autoimmune diseases, you can use the function `result_df = 
 
 To control the training of the model, use the function call:
 
-'results = train_and_use_model(data_type, data, x_test, y_test, neg_file, pos_file, model_type, model_file)'
+`results = train_and_use_model(data_type, data, x_test, y_test, neg_file, pos_file, model_type, model_file)`
 
-The 'data_type' parameter determines the feature combination used for training the model. There are three options available: “A”, “A_V”, and “A_VF”.
+The `data_type` parameter determines the feature combination used for training the model. There are three options available: “A”, “A_V”, and “A_VF”.
 
 ### Training a Model Based on Amino Acid Sequence Features
 
-If you wish to train a model based solely on amino acid sequences, you would set the data_type parameter to "A"，where the input other hyperparameters are:
+If you wish to train a model based solely on amino acid sequences, you would set the `data_type` parameter to "A"，where the input other hyperparameters are:
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences). For example, 'Train_and_Test_Data\\Data_for_train\\Sample_A.csv'. Please format the file as follows:
 
@@ -109,7 +109,7 @@ The output results are:
 
 ### Training a Model Based on V-Gene and Amino Acid Sequence Features
 
-To train a model based on V-gene and amino acid sequence feature combinations, you would set the data_type parameter to "A_V"，where the input other hyperparameters are:
+To train a model based on V-gene and amino acid sequence feature combinations, you would set the `data_type` parameter to "A_V"，where the input other hyperparameters are:
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences and corresponding V-genes). For example, 'Train_and_Test_Data\\Data_for_train\\Sample_A_V.csv'. Please format the file as follows:
 
@@ -129,7 +129,7 @@ The output results are:
 
 ### Training a Model Based on V-Gene Family and Amino Acid Sequence Features
 
-To train a model based on V-gene family and amino acid sequence feature combinations, you would set the data_type parameter to "A_VF"，where the input other hyperparameters are:
+To train a model based on V-gene family and amino acid sequence feature combinations, you would set the `data_type` parameter to "A_VF"，where the input other hyperparameters are:
 
 
 - `data`: The file path for the training data, which should be a CSV file containing features (CDR3AA sequences and corresponding V-gene families). For example, 'Train_and_Test_Data\\Data_for_train\\Sample_A_VF.csv'. Please format the file as follows:
