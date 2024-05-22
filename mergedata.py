@@ -95,7 +95,8 @@ def mergedata_with_gene(file_neg, file_pos, AA_column, gene_column, num_freq):
             ptc = ptc[:num_freq]
             ptc = ptc.drop('counts', axis=1) 
             
-            
+            # Add a column to the dataframe with the binary classification label
+            ptc['positive'] = zero_one
             
             # If this is the first iteration, set the total dataframe to the current one
             # Otherwise, concatenate the current dataframe with the total dataframe
