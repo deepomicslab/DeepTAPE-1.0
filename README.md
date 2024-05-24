@@ -10,7 +10,7 @@ The Deep Learning-based TCRβ-utilized Autoimmune Disease Prediction Engine (Dee
 It is recommended to run this package within a conda environment, and Anaconda Prompt is suggested for use. From downloading the package to satisfying the environment requirements, and then to running the script, the following Prompt commands should be executed in order:
 
 ```bash
-git clone https://github.com/SHENTongfei/DeepTAPE-1.0.git
+git clone https://github.com/deepomicslab/DeepTAPE-1.0.git
 cd DeepTAPE-1.0
 conda create --name DeepTAPE python=3.8
 conda activate DeepTAPE
