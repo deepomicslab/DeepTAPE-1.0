@@ -15,11 +15,12 @@ This directory contains the source data files used to generate the figures and p
   - `Anti-dsDNA`: Autoantibodies where high levels correlate with greater disease activity.
   - `damage`: Categorizes cumulative, irreversible organ damage based on the number of affected tissue types.
 
-### `autoimmune-associated_score_in_HI.csv` and `autoimmune-associated_score_in_SLE.csv`
+### `Score_of_seq_HI.csv` and `Score_of_seq_SLE.csv`
 
 - **Description**: These files provide the source data for Figure 4 and 5. They contain scores for representative T-cell receptor (TCR) CDR3 sequences, as inferred by the DeepTAPE TCR-level classifier trained to identify autoimmune-associated CDR3s. The sequences have been deduplicated by their CDR3 amino acid sequence, and the score from their first appearance is retained.
-  - `autoimmune-associated_score_in_HI.csv`: Contains scores for sequences from the Healthy Individuals (HI) cohort.
-  - `autoimmune-associated_score_in_SLE.csv`: Contains scores for sequences from the SLE patient cohort.
+  - `Score_of_seq_HI.csv`: Contains scores for sequences from the Healthy Individuals (HI) cohort.
+  - `Score_of_seq_SLE.csv`: Contains scores for sequences from the SLE patient cohort.
 - **Columns**:
   - `CDR3AA`: The amino acid sequence of the deduplicated TCR CDR3 region.
+
   - `SeqScore`: The autoimmune-associated score assigned to the sequence by the model.
