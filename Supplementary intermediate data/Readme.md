@@ -6,14 +6,7 @@ This directory contains the source data files used to generate the figures and p
 
 ### File Descriptions
 
-#### `SLE_Clinical_Info_brief.new.csv`
 
-- **Description**: This file contains key clinical information for the Systemic Lupus Erythematosus (SLE) patient cohort.
-- **Columns**:
-  - `C3`: A complement protein; low levels suggest higher disease activity.
-  - `C4`: A complement protein; low levels are associated with increased disease activity.
-  - `Anti-dsDNA`: Autoantibodies; high levels correlate with greater disease activity.
-  - `damage`: Categorizes cumulative, irreversible organ damage based on the number of affected tissue types.
 
 #### `Score_of_CDR3_HI.csv` and `Score_of_CDR3_SLE.csv`
 
@@ -57,4 +50,5 @@ The `baseline_models` directory contains the repertoire classifier models implem
 -   **`-A_VF.h5`**: Models that use the CDR3 amino acid sequence and the V gene family category as input features.
 
 The corresponding results and performance evaluation of these models can be found in **Supplementary Tables S1 and S2** of the manuscript.
+
 
